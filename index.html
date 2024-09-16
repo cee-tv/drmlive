@@ -119,9 +119,9 @@
     }
 
     function setupVideoPlayer() {
-      var manifestInput = "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/tv5_hd.mpd";
-      var keyIdInput = "2615129ef2c846a9bbd43a641c7303ef";
-      var keyInput = "07c7f996b1734ea288641a68e1cfdc4d";
+      var manifestInput = document.getElementById("manifest");
+      var keyIdInput = document.getElementById("keyId");
+      var keyInput = document.getElementById("key");
 
       var manifest = manifestInput.value;
       var keyId = keyIdInput.value;
@@ -160,9 +160,9 @@
     }
 
     // Get parameters from the URL
-    var fileUrl = getParameterByName('emmbed-url');
-    var kid = getParameterByName('kid');
-    var key = getParameterByName('key');
+    var fileUrl = getParameterByName('https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/tv5_hd.mpd');
+    var kid = getParameterByName('2615129ef2c846a9bbd43a641c7303ef');
+    var key = getParameterByName('07c7f996b1734ea288641a68e1cfdc4d');
 
     // Determine stream type
     var isMpd = fileUrl.endsWith('.mpd');
